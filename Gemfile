@@ -3,8 +3,7 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.3'
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+gem 'pg'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -38,7 +37,8 @@ gem 'bootstrap-sass'
 gem 'autoprefixer-rails' # related to bootstrap-sass
 gem 'haml-rails'
 gem 'carrierwave' # and mini-magick are closely related
-gem 'mini_magick'
+# gem 'mini_magick'
+gem 'cloudinary'
 gem 'puma' # allows concurrent threading and faster than webbrick
 gem 'devise' # user mechanisms
 gem 'country-select'
