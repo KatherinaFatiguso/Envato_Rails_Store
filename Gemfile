@@ -32,6 +32,27 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+# New Gems
+
+gem 'bootstrap-sass'
+gem 'autoprefixer-rails' # related to bootstrap-sass
+gem 'haml-rails'
+gem 'carrierwave' # and mini-magick are closely related
+gem 'mini_magick'
+gem 'puma' # allows concurrent threading and faster than webbrick
+gem 'devise' # user mechanisms
+gem 'country-select'
+
+group :test do
+  gem 'minitest-rails'
+  gem 'factory_girl_rails'
+end
+
+group :development do
+  gem 'html2haml' # we need it in case we to convert erb file back to haml
+end
+
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
@@ -41,5 +62,7 @@ group :development, :test do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
-end
 
+  # New gem
+  gem 'pry-rails' # allows us to debug rails in real-time
+end
