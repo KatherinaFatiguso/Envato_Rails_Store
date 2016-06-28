@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
   resources :products
+
+  resource :cart, only: [ :show ] do # note: resource is singular, not plural.
+    # show will allow us to view the contents of the cart later on.
+    post "add", path: "add/:id", on: :member # post means create, it works on member
+  end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
